@@ -1,23 +1,28 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Lab02Wzorce.Iterator
+﻿namespace Lab02Wzorce.Iterator
 {
     internal class ConcreteIterator : Iterator
     {
+        ConcreteAggregate aggregate;
+        int current = 0;
+        // Constructor
+        public ConcreteIterator(ConcreteAggregate aggregate)
+        {
+            this.aggregate = aggregate;
+        }
+
         public override bool hasNext()
         {
-            //TODO
-            throw new NotImplementedException();
+            return current < aggregate.Count - 1;
         }
 
         public override object next()
         {
-            //TODO
-            throw new NotImplementedException();
+            object ret = null;
+            if (current < aggregate.Count - 1)
+            {
+                ret = aggregate[++current];
+            }
+            return ret;
         }
     }
 }

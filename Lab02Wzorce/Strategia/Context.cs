@@ -17,7 +17,7 @@
 
         public void execute()
         {
-            Console.WriteLine("Context: executing");
+            Console.WriteLine("Context: executing.");
             this._strategy.execute();
         }
     }

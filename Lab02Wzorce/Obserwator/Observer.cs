@@ -8,7 +8,6 @@ namespace Lab02Wzorce.Obserwator
 {
     internal abstract class Observer
     {
-        public abstract byte[] state { get; set; }
-        public abstract void update(byte[] data);
+        public abstract void update();
     }
 }

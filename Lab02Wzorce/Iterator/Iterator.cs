@@ -7,9 +7,10 @@ using System.Threading.Tasks;
 
 namespace Lab02Wzorce.Iterator
 {
-    internal abstract class Iterator
+    public abstract class Iterator
     {
-        public abstract bool hasNext();
         public abstract object next();
+        public abstract bool hasNext();
+
     }
 }

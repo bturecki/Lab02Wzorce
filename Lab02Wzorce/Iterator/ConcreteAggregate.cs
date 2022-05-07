@@ -8,10 +8,21 @@ namespace Lab02Wzorce.Iterator
 {
     internal class ConcreteAggregate : Aggregate
     {
+        List<object> items = new List<object>();
         public override Iterator iterator()
         {
-            //TODO
-            throw new NotImplementedException();
+            return new ConcreteIterator(this);
+        }
+        // Get item count
+        public int Count
+        {
+            get { return items.Count; }
+        }
+        // Indexer
+        public object this[int index]
+        {
+            get { return items[index]; }
+            set { items.Insert(index, value); }
         }
     }
 }
